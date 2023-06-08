@@ -22,9 +22,13 @@ public class RpcClientConfig {
      */
     private int connectTimeoutSeconds = 5;
     /**
-     * 等待发送心跳时间（秒）
+     * 写空闲发送心跳间隔（秒）
      */
-    private long heartbeatSeconds = 5;
+    private long heartbeatSeconds = 5L;
+    /**
+     * 请求超时时间
+     */
+    private int requestTimeOutSeconds = 3;
     /**
      * 默认负载均衡规则:Random
      */

@@ -30,6 +30,7 @@ import java.net.InetSocketAddress;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 /**
  * rpcClient
@@ -47,6 +48,7 @@ public class RpcClient implements Client {
     private final LoadBalance loadBalance;
 
     private Bootstrap bootstrap;
+
     private EventLoopGroup eventLoopGroup;
 
     public RpcClient(RpcClientConfig rpcClientConfig) {
@@ -117,7 +119,11 @@ public class RpcClient implements Client {
         });
 
         try {
-            return resultFuture.get();
+            return resultFuture.get(rpcClientConfig.getConnectTimeoutSeconds(), TimeUnit.SECONDS);
+        } catch (TimeoutException e) {
+            log.error("获取响应结果超时");
+            RpcResponseFuture.fail(rpcRequest.getRequestId(), e);
+            AybRpcException.cast("获取响应结果超时");
         } catch (Exception e) {
             log.error("获取响应结果失败,原因:{}", e.getMessage());
             RpcResponseFuture.fail(rpcRequest.getRequestId(), e);

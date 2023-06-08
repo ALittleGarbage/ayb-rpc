@@ -74,6 +74,7 @@ public class AybRpcAutoConfiguration {
         RpcClientConfig rpcClientConfig = new RpcClientConfig(
                 clientProperties.getConnectTimeoutSeconds(),
                 clientProperties.getHeartbeatSeconds(),
+                clientProperties.getRequestTimeOutSeconds(),
                 LoadBalanceRuleEnum.getByName(clientProperties.getLoadBalanceRule()),
                 RegistryTypeEnum.getByName(commonProperties.getRegistryType()),
                 commonProperties.getRegistryServerAddress(),
