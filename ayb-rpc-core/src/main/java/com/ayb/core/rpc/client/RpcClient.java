@@ -119,7 +119,7 @@ public class RpcClient implements Client {
         });
 
         try {
-            return resultFuture.get(rpcClientConfig.getConnectTimeoutSeconds(), TimeUnit.SECONDS);
+            return resultFuture.get(rpcClientConfig.getRequestTimeOutSeconds(), TimeUnit.SECONDS);
         } catch (TimeoutException e) {
             log.error("获取响应结果超时");
             RpcResponseFuture.fail(rpcRequest.getRequestId(), e);
