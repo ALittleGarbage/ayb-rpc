@@ -1,0 +1,5 @@
+spring:
+  ayb:
+    rpc:
+      port: 9888
+      registryServerAddress: 43.142.167.75:8848
