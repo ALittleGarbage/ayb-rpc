@@ -25,7 +25,7 @@ public class NacosServiceRegisterImpl implements ServiceRegister {
     public Object getService(String rpcServiceName) {
         Object service = RPC_SERVICES_MAP.get(rpcServiceName);
         if (service == null) {
-            throw new RuntimeException("获取到的service不存在");
+            throw new RuntimeException("获取到的service地址不存在");
         }
 
         return service;

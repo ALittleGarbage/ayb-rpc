@@ -39,7 +39,6 @@ public class RpcBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (bean.getClass().isAnnotationPresent(Service.class)) {
             String serviceName = bean.getClass().getInterfaces()[0].getName();
-            System.out.println();
             server.registerService(serviceName, bean);
         }
         return bean;
