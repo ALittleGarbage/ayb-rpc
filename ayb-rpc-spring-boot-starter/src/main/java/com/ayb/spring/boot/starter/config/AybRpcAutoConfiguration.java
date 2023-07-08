@@ -33,7 +33,7 @@ import java.nio.charset.StandardCharsets;
 @EnableConfigurationProperties({RpcServerProperties.class, RpcClientProperties.class, RpcCommonProperties.class})
 public class AybRpcAutoConfiguration {
 
-    @Bean(initMethod = "start", destroyMethod = "close")
+    @Bean(destroyMethod = "close")
     @ConditionalOnMissingBean(Server.class)
     public Server rpcServer(RpcServerProperties serverProperties, RpcCommonProperties commonProperties) {
 
@@ -57,7 +57,7 @@ public class AybRpcAutoConfiguration {
         return new RpcServer(rpcServerConfig);
     }
 
-    @Bean(initMethod = "start", destroyMethod = "close")
+    @Bean(destroyMethod = "close")
     @ConditionalOnMissingBean(Client.class)
     public Client rpcClient(RpcClientProperties clientProperties, RpcCommonProperties commonProperties) {
         if (StringUtils.isEmpty(commonProperties.getRegistryServerAddress())) {

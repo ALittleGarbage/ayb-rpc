@@ -11,14 +11,16 @@ import org.springframework.stereotype.Service;
 import java.lang.reflect.Field;
 
 /**
+ * 扫描注解，用于服务注册、注入代理对象
+ *
  * @author ayb
  * @date 2023/6/7
  */
 public class RpcBeanPostProcessor implements BeanPostProcessor {
 
-    private Server server;
+    private final Server server;
 
-    private RpcServiceProxy rpcServiceProxy;
+    private final RpcServiceProxy rpcServiceProxy;
 
     public RpcBeanPostProcessor(Server server, RpcServiceProxy rpcServiceProxy) {
         this.server = server;

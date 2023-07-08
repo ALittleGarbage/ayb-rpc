@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Import;
 import java.lang.annotation.*;
 
 /**
+ * 开启ayb-rpc方法注解
+ *
  * @author ayb
  * @date 2023/6/6
  */
@@ -14,6 +16,4 @@ import java.lang.annotation.*;
 @Import({RpcBeanRegistrar.class})
 @Documented
 public @interface EnableAybRpc {
-
-    String basePackage() default "";
 }
