@@ -95,6 +95,8 @@ public class RpcDecoder extends LengthFieldBasedFrameDecoder {
                 }
             }
         }
+        // 释放ByteBuf，防止内存泄漏
+        frame.release();
 
         return rpcMessage;
     }
