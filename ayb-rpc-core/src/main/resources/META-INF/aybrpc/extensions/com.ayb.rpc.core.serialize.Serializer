@@ -1,0 +1,1 @@
+Kryo=com.ayb.rpc.core.serialize.impl.KryoSerializer;

@@ -1,0 +1,1 @@
+Nacos=com.ayb.rpc.core.registry.nacos.impl.NacosServiceRegisterImpl;

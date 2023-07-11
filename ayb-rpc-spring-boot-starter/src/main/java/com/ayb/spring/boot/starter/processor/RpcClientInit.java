@@ -1,6 +1,6 @@
 package com.ayb.spring.boot.starter.processor;
 
-import com.ayb.core.rpc.Client;
+import com.ayb.rpc.core.rpc.Client;
 import org.springframework.beans.factory.InitializingBean;
 
 /**

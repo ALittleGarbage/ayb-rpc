@@ -1,0 +1,2 @@
+None=com.ayb.rpc.core.compress.impl.NoneCompress;
+Gzip=com.ayb.rpc.core.compress.impl.GzipCompress;

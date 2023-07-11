@@ -1,3 +1,0 @@
-Random=com.ayb.core.loadbalance.impl.RandomLoadBalance;
-Round=com.ayb.core.loadbalance.impl.RoundLoadBalancer;
-Hash=com.ayb.core.loadbalance.impl.ConsistentHashLoadBalancer;

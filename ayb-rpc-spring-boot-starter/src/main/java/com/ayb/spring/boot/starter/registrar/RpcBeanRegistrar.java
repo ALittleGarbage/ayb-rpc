@@ -1,6 +1,6 @@
 package com.ayb.spring.boot.starter.registrar;
 
-import com.ayb.core.rpc.client.RpcServiceProxy;
+import com.ayb.rpc.core.rpc.client.RpcServiceProxy;
 import com.ayb.spring.boot.starter.processor.RpcBeanPostProcessor;
 import com.ayb.spring.boot.starter.processor.RpcClientInit;
 import com.ayb.spring.boot.starter.processor.RpcServerInit;

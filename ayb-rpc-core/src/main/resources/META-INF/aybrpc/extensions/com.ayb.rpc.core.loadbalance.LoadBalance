@@ -1,0 +1,3 @@
+Random=com.ayb.rpc.core.loadbalance.impl.RandomLoadBalance;
+Round=com.ayb.rpc.core.loadbalance.impl.RoundLoadBalancer;
+Hash=com.ayb.rpc.core.loadbalance.impl.ConsistentHashLoadBalancer;

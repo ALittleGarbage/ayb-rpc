@@ -1,2 +1,0 @@
-None=com.ayb.core.compress.impl.NoneCompress;
-Gzip=com.ayb.core.compress.impl.GzipCompress;

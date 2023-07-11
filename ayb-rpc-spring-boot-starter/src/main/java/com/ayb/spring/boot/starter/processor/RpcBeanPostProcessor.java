@@ -1,8 +1,8 @@
 package com.ayb.spring.boot.starter.processor;
 
-import com.ayb.common.exception.AybRpcException;
-import com.ayb.core.rpc.Server;
-import com.ayb.core.rpc.client.RpcServiceProxy;
+import com.ayb.rpc.common.exception.AybRpcException;
+import com.ayb.rpc.core.rpc.Server;
+import com.ayb.rpc.core.rpc.client.RpcServiceProxy;
 import com.ayb.spring.boot.starter.annotation.RpcReference;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

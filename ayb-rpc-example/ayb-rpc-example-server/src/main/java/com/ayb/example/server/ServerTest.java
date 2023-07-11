@@ -1,10 +1,10 @@
 package com.ayb.example.server;
 
-import com.ayb.core.config.RpcCodecConfig;
-import com.ayb.core.config.RpcServerConfig;
-import com.ayb.core.rpc.Server;
-import com.ayb.core.rpc.server.RpcServer;
 import com.ayb.example.impl.HelloServiceImpl;
+import com.ayb.rpc.core.config.RpcCodecConfig;
+import com.ayb.rpc.core.config.RpcServerConfig;
+import com.ayb.rpc.core.rpc.Server;
+import com.ayb.rpc.core.rpc.server.RpcServer;
 import com.ayb.service.HelloService;
 
 /**
